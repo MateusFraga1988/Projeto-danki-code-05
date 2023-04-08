@@ -2,36 +2,36 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Oswald', sans-serif;
+	font-family:'Oswald', sans-serif;
 }
 
-html,body {
+html,body{
 	height: 100%;
 }
 
-.container {
+.container{
 	width: 100%;
 	max-width: 1400px;
-	margin: 0 auto;
+	margin:0 auto;
 }
 
-.clear {
+.clear{
 	clear: both;
 }
 
-header {
-	padding: 20px 2% 35px 2%;
+header{
+	padding:20px 2% 35px 2%;
 	height: 130px;
 }
 
-header div.logo {
+header div.logo{
 	float: left;
 }
 
-header nav.desktop {
+header nav.desktop{
 	float: right;
 	position: relative;
-	top: 40px;
+	top:40px;
 }
 
 nav.mobile{
@@ -68,20 +68,20 @@ nav.mobile li a{
 	text-decoration: none;
 }
 
-header nav.desktop ul {
+header nav.desktop ul{
 	list-style-type: none;
 }
 
 header nav.desktop ul li{
 	float: left;
 	font-size: 23px;
-	padding: 0 30px;
+	padding:0 30px;
 	font-style: italic;
 }
 
 header nav.desktop a{
-	color: black;
-	text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 section.banner{
@@ -182,6 +182,8 @@ section.veiculos-destaque .container{
 .vitrine-destaque{
 	float: left;
 	width: 33.3%;
+	text-align: left;
+	
 }
 
 .vitrine-destaque .carro-img{
@@ -205,7 +207,6 @@ section.veiculos-destaque .container{
 	font-size: 15px;
 	font-style: italic;
 }
-
 
 
 .btn1{
@@ -310,6 +311,7 @@ section.veiculos-destaque .container{
 	font-size: 23px;
 }
 
+
 section.contato{
 	padding:80px 2% 0 2%;
 }
@@ -364,7 +366,7 @@ section.contato input[type=submit]{
 }
 
 footer{
-	margin-top: 20px;
+	margin-top:20px;
 	padding:40px 2%;
 	background: #252525;
 }
@@ -398,7 +400,7 @@ footer p{
 
 
 section.venda{
-	padding:90px 0;
+	padding:90px 2%;
 	min-height: 90%;
 }
 
@@ -412,7 +414,7 @@ section.venda{
 }
 
 .search1{
-	width: 90%;
+	width:90%;
 }
 
 .search1 h2{
@@ -445,12 +447,13 @@ section.venda{
 	width: 26px;
 	height: 26px;
 	position: absolute;
-	left: 0;
+	/*Vamos deixar em -13 para ficar centralizado!*/
+	left: -13px;
 	top: -3px;
 	cursor: pointer;
 	border-radius: 8px;
 	background:linear-gradient(to bottom,rgb(255,255,255),rgb(180,180,180));
-	border:1px solid #777;
+	border:1px solid  #777;
 }
 
 .valor-pesquisa{
@@ -499,11 +502,6 @@ section.venda{
 	position: relative;
 }
 
-.form-venda-wraper span{
-	padding:0 10px;
-	display: inline-block;
-	vertical-align: top;
-}
 
 .circle{
 	width: 8px;
@@ -536,7 +534,6 @@ section.venda{
 .vitrine-venda .vitrine-destaque{
 	margin-top:20px;
 }
-
 
 section.venda-single{
 	padding:80px 2% 0 2%;
@@ -579,9 +576,9 @@ section.venda-single .container{
 	margin-top:25px;
 }
 
-.nav-galeria-parent {
+.nav-galeria-parent{
 	width: 100%;
-	padding: 36px;
+	padding:36px;
 	position: relative;
 }
 
@@ -589,28 +586,32 @@ section.venda-single .container{
 	position: absolute;
 	left: 8px;
 	top: 50%;
-	transform: translateY(-15%);
 	cursor: pointer;
-	background-image: url('../imagens/arrow-left.png');
+	transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	background-image:url('../imagens/arrow-left.png');
 	background-size: 100% 100%;
 	width: 22px;
 	height: 22px;
 }
 
+
+
 .arrow-right-nav{
 	position: absolute;
 	right: 8px;
 	top: 50%;
-	transform: translateY(-15%);
 	cursor: pointer;
-	background-image: url('../imagens/arrow-right.png');
+	transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	background-image:url('../imagens/arrow-right.png');
 	background-size: 100% 100%;
 	width: 22px;
 	height: 22px;
 }
 
 .info-bread{
-	padding: 20px 0;
+	padding:20px 0;
 	text-align: left;
 }
 
@@ -624,7 +625,7 @@ section.venda-single .container{
 }
 
 .info-bread span{
-	padding: 0 30px;
+	padding:0 30px;
 }
 
 .nav-galeria{
@@ -633,20 +634,26 @@ section.venda-single .container{
 }
 
 .nav-galeria-wraper{
-	width: 200%;
+	/*
+		via js=>width
+	*/
 }
 
 .mini-img-wraper{
 	float: left;
-	padding: 9px;
-	width:calc(33.3% * (100 / 200));
+	padding:9px;
+	/*
+		via js=>width
+	*/
 }
 
 .mini-img{
-	cursor: pointer;
 	width: 100%;
-	height: 70%;
+	cursor: pointer;
+	padding-top:70%;
 	background-position: center;
+	background-size: cover;
+	background-color:green;
 }
 
 section.sobre{
@@ -656,18 +663,17 @@ section.sobre{
 
 section.sobre .container{
 	max-width: 840px;
-	margin-top: 30px;
+	margin-top:30px;
 }
 
 section.sobre .img-destaque-sobre{
 	width: 100%;
-	padding-top: 60%;
-	background-color: rgb(220, 220, 220);
+	padding-top:60%;
+	background-color: rgb(220,220,220);
 }
 
 section.sobre .descricao-autor{
-	margin-top: 20px;
-	text-align: left;
+	margin-top:20px;
 }
 
 .descricao-autor h2{
@@ -677,26 +683,28 @@ section.sobre .descricao-autor{
 .descricao-autor p{
 	line-height: 28px;
 	font-size: 16px;
-	margin-top: 10px;
+	margin-top:10px;
 }
 
-.descricao-autor2 {
-	margin-top: 40px;
+.descricao-autor2{
+	margin-top:40px;
 }
 
-.img-small {
+
+.img-small{
 	width: 30%;
-	padding-top: 30%;
+	padding-top:30%;
 	float: left;
-	background-color: rgb(220, 220, 220);
+	background-color: rgb(220,220,220);
 }
 
 .descricao-autor2 p{
 	float: left;
 	width: 70%;
 	line-height: 28px;
-	padding: 15px;
+	padding:15px;
 }
+
 
 @media screen and (max-width: 1100px){
 
@@ -726,8 +734,8 @@ section.sobre .descricao-autor{
 	}
 }
 
-@media screen and (max-width: 768px) {
-	
+@media screen and (max-width: 768px){
+
 	footer nav{
 		display: none;
 	}
@@ -799,11 +807,11 @@ section.sobre .descricao-autor{
 	}
 
 	.descricao-veiculo{
-		padding: 20px 0;
+		padding:20px 0;
 		text-align: center;
 	}
 
-	.descricao-veiculo a {
+	.descricao-veiculo a{
 		display: inline-block;
 	}
 
@@ -811,6 +819,8 @@ section.sobre .descricao-autor{
 		max-width: none;
 	}
 }
+
+
 
 @media screen and (max-width: 580px){
 .text-banner{
@@ -840,6 +850,7 @@ section.veiculos-destaque .container{
 	display: inline-block;
 	float: none;
 	width: 80%;
+	text-align: center;
 	margin-top:20px;
 }
 
@@ -847,14 +858,14 @@ section.veiculos-destaque .container{
 	display: inline-block;
 }
 
-.img-small {
+.img-small{
 	width: 100%;
-	padding-top: 100%;
+	padding-top:100%;
 }
 
 .descricao-autor2 p{
 	width: 100%;
-	padding: 20px 0;
+	padding:20px 0;
 }
 
 }
@@ -863,5 +874,4 @@ section.veiculos-destaque .container{
 	.vitrine-destaque{
 		width: 100%;
 	}
-
 }
